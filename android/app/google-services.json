@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "809863763977",
+    "project_id": "track-it-dab4b",
+    "storage_bucket": "track-it-dab4b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809863763977:android:175046aee54894642280d8",
+        "android_client_info": {
+          "package_name": "com.karthikeya.trackit.track_it"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs0-pm5iBHlmOIrK1kfDYLlNgbpxB24VU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
