@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../palette.dart';
+import '../../palette.dart';
 
 class AttendanceReport extends StatelessWidget {
   const AttendanceReport({super.key});

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:track_it/screens/time_table.dart';
+import 'package:track_it/users/screens/time_table.dart';
 
 import '../utils/class_tile.dart';
 import '../utils/subject_tile.dart';

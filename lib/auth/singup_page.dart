@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:track_it/palette.dart';
 
 import 'login_page.dart';
 
@@ -43,7 +44,7 @@ class _SignUpPageState extends State<SignUpPage> {
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-        backgroundColor: Colors.green,
+        backgroundColor: colorOne,
         body: Column(
           children: [
             SizedBox(
@@ -152,7 +153,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             margin: const EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
-                              color: Colors.green,
+                              color: colorOne,
                             ),
                             child: Center(
                                 child: Text(

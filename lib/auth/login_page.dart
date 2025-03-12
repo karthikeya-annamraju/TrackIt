@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:track_it/auth/singup_page.dart';
+import 'package:track_it/palette.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -17,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
 
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  bool showPassword = false;
 
   @override
   void dispose() {
@@ -40,9 +42,11 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
+    // bool showPassword = false;
 
     return Scaffold(
-        backgroundColor: Colors.green,
+        // backgroundColor: Colors.green,
+      backgroundColor: colorOne,
         body: Column(
           children: [
             SizedBox(
@@ -104,8 +108,15 @@ class _LoginPageState extends State<LoginPage> {
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           child: TextField(
                             controller: passwordController,
-                            obscureText: true,
+                            obscureText: !showPassword,
                             decoration: InputDecoration(
+                              suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    showPassword = !showPassword;
+                                  });
+                                },
+                                icon: Icon(showPassword ? Icons.visibility_off_outlined : Icons.visibility_outlined, size: 18,),),
                               prefixIcon: const Icon(
                                 Icons.lock_outline_rounded,
                                 size: 20,
@@ -141,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                             margin: const EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
-                              color: Colors.green,
+                              color: colorOne,
                             ),
                             child: Center(
                                 child: Text(

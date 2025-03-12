@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:track_it/auth/login_page.dart';
-import 'package:track_it/screens/home_page.dart';
+import 'package:track_it/users/screens/home_page.dart';
 
 
 void main() async {
@@ -22,24 +22,21 @@ class MyApp extends StatelessWidget {
       // locale: DevicePreview.locale(context),
       // builder: DevicePreview.appBuilder,
       title: 'Attendance Track',
-      theme: ThemeData.light(
-      ).copyWith(
-        textTheme: GoogleFonts.poppinsTextTheme()
-      ),
+      theme:
+          ThemeData.light().copyWith(textTheme: GoogleFonts.poppinsTextTheme()),
       home: StreamBuilder(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState ==  ConnectionState.waiting) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-          if (snapshot.data != null) {
-            return const HomePage();
-          }
-          return const LoginPage();
-        }
-      ),
+          stream: FirebaseAuth.instance.authStateChanges(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            if (snapshot.data != null) {
+              return const HomePage();
+            }
+            return const LoginPage();
+          }),
     );
   }
 }
